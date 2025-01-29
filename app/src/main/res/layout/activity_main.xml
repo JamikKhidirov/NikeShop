@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@color/white">
+
+
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/round_button2"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:background="@drawable/backimagebtn"
+        android:src="@mipmap/ic_back"
+        android:scaleType="centerInside"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="66dp"
+        app:rippleColor="?attr/colorControlHighlight"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="32sp"
+        android:text="Привет!"
+        android:layout_marginTop="11dp"
+        android:textColor="@color/black"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="8dp"
+        android:text="Заполните Свои данные или\nпродолжите через социальные медиа"
+        android:textColor="@color/PodPrivet"
+        android:textSize="16sp"
+        android:layout_gravity="center" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textSize="16sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="35dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:hintEnabled="true"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/backedit"
+        android:textColorHint="@color/editTextColor"
+        android:backgroundTint="@color/white">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Введите email"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/backedit"
+            android:textColorHint="@color/editTextColor"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Пороль"
+        android:textSize="16sp"
+        android:layout_marginTop="26dp"
+        android:layout_marginStart="20dp"
+        android:textStyle="bold"
+        android:background="@color/white"
+        />
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:hintEnabled="true"
+        app:passwordToggleEnabled="true"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/backedit"
+        android:textColorHint="@color/editTextColor"
+        android:backgroundTint="@color/white">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Введите пароль"
+            android:inputType="textPassword"
+            android:background="@drawable/backedit"
+            android:textColorHint="@color/editTextColor" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/vostanvit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="20dp"
+        android:text="Восстановить"
+        android:layout_marginTop="12dp"
+        android:textColor="#707B81"
+        android:textSize="12dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnReg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Войти"
+        android:textAllCaps="false"
+        android:textSize="14sp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/backbutton"
+        android:textColor="#F7F7F9" />
+
+
+    <LinearLayout
+        android:id="@+id/sozAkk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="109dp"
+        android:layout_marginBottom="50dp"
+        android:layout_gravity="center">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Вы впервые?"
+            android:textColor="#6A6A6A"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp"
+            android:text="Создать пользователя"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
