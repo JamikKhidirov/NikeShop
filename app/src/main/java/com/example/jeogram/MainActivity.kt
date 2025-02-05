@@ -51,13 +51,11 @@ class MainActivity : AppCompatActivity() {
         }
 
         emailEditText.setOnFocusChangeListener { v, hasFocus ->
-            if (hasFocus){
+            if (hasFocus) {
                 emailEditText.hint = ""
                 lay.hint = ""
-            }
-
-            else{
-                if(emailEditText.text?.isEmpty() == true){
+            } else {
+                if (emailEditText.text?.isEmpty() == true) {
                     emailEditText.hint = "Введите email"
                 }
             }
@@ -66,11 +64,10 @@ class MainActivity : AppCompatActivity() {
 
 
         passwordEditText.setOnFocusChangeListener { v, hasFocus ->
-            if (hasFocus){
+            if (hasFocus) {
                 passwordEditText.hint = ""
                 layPass.hint = ""
-            }
-            else if (passwordEditText.text?.isEmpty() == true){
+            } else if (passwordEditText.text?.isEmpty() == true) {
                 passwordEditText.hint = "Введите пороль"
             }
         }
@@ -104,6 +101,10 @@ class MainActivity : AppCompatActivity() {
                 passwordEditText.setText("")
                 emailEditText.clearFocus()
                 passwordEditText.clearFocus()
+                val intentOn: Intent = Intent(this, OnboardActivity::class.java)
+                finish()
+                startActivity(intentOn)
+
             } else {
                 Toast.makeText(this, "Не все поля заполнены!", Toast.LENGTH_SHORT).show()
             }
@@ -115,3 +116,5 @@ class MainActivity : AppCompatActivity() {
 
     }
 }
+
+
